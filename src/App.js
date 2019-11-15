@@ -1,27 +1,30 @@
 import React, { Component} from 'react';
 import Table from './components/table'
-/* import getData from './actions/PageActions'
-import { connect } from 'react-redux'; */
+import getData from './actions/PageActions'
+import {connect} from 'react-redux'
 
-export default class App extends Component {
-	gettingData = () => {
+class App extends Component {
+
+	componentDidMount = () => {
 		this.props.getData()
 	}
+
 	render () {
+		console.log(this.props)
 		return (
 			<div className="container">
 				<h1>The table of films</h1>
-				<Table data={this.gettingData} />
+				<Table />
 			</div>
 		)
 	}
 	
 }
 
-/* const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = dispatch => {
 	return {
 		getData: () => dispatch(getData())
 	}
 }
 
-export default connect(null, mapDispatchToProps)(App) */
+export default connect(null, mapDispatchToProps)(App)

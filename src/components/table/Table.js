@@ -1,7 +1,6 @@
 import React from 'react'
 import Row from '../row'
 import { connect } from 'react-redux'
-// import getData from '../../actions/PageActions'
 
 const Table = (props) => {
 
@@ -34,7 +33,8 @@ const Table = (props) => {
 
 const mapStateToProps = (store) => {
     return {
-        data: store.data
+        data: store.data,
+        loading: store.isLoading
     }
 }
 
