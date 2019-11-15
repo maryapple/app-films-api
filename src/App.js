@@ -1,9 +1,9 @@
 import React, { Component} from 'react';
 import Table from './components/table'
-import getData from './actions/PageActions'
-import { connect } from 'react-redux';
+/* import getData from './actions/PageActions'
+import { connect } from 'react-redux'; */
 
-class App extends Component {
+export default class App extends Component {
 	gettingData = () => {
 		this.props.getData()
 	}
@@ -18,10 +18,10 @@ class App extends Component {
 	
 }
 
-const mapDispatchToProps = dispatch => {
+/* const mapDispatchToProps = dispatch => {
 	return {
 		getData: () => dispatch(getData())
 	}
 }
 
-export default connect(null, mapDispatchToProps)(App)
+export default connect(null, mapDispatchToProps)(App) */
